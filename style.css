@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+:root {
+  /* Light mode */
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --border-color: #808080;
+  --muted-color: #808080;
+  --logo-color: #333333;
+  --item-bg-color: #ffffff;
+  --item-hover-bg: #f8f9fa;
+  --link-color: blue;
+  --review-bg: #ffffff;
+  --mobile-item-bg: #e9ecef;
+  --container-border: #808080;
+}
+
+.dark-mode {
+  /* Dark mode */
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --border-color: #555555;
+  --muted-color: #aaaaaa;
+  --logo-color: #f0f0f0;
+  --item-bg-color: #1e1e1e;
+  --item-hover-bg: #2c2c2c;
+  --link-color: #4da6ff;
+  --review-bg: #1e1e1e;
+  --mobile-item-bg: #2c2c2c;
+  --container-border: #555555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 900px;
+  border: 1px solid var(--container-border);
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+/* HEADER */
+header {
+  padding: 5px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  background-color: var(--logo-color);
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  background-color: var(--item-bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--item-hover-bg);
+}
+
+.main-title,
+.title,
+.sub-title,
+footer {
+  font-family: "Architects Daughter", cursive;
+}
+
+.text-muted {
+  color: var(--muted-color);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-left: 0;
+  margin-right: 0;
+}
+.section-column {
+  padding: 15px;
+  border-right: 1px solid var(--border-color);
+}
+.section-column:last-child {
+  border-right: none;
+}
+.content-section .title {
+  margin-bottom: 15px;
+}
+
+.item {
+  padding: 8px 0;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+.item:hover {
+  background-color: var(--item-hover-bg);
+}
+.item:last-child {
+  border-bottom: none;
+}
+.profile-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+.profile-link:hover {
+  text-decoration: underline;
+}
+.course-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* REVIEW Section */
+.review-section {
+  padding: 20px;
+}
+.review {
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 15px;
+  height: 100%;
+  background-color: var(--review-bg);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.teacher {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.position {
+  color: var(--muted-color);
+  font-weight: normal;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px 0;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 767.98px) {
+  .section-column {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .section-column:last-child {
+    border-bottom: none;
+  }
+  .title {
+    text-align: center;
+  }
+  .item {
+    text-align: center;
+    background-color: var(--mobile-item-bg);
+  }
+  header .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .d-flex {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .col-md-6.text-md-right {
+    text-align: center !important;
+  }
+}
